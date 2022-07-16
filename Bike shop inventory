@@ -1,0 +1,27 @@
+/* An inventory database for a shop which sells bikes */
+CREATE TABLE inventory (id INTEGER PRIMARY KEY, brand TEXT, quantity INTEGER, type TEXT, price INTEGER);
+
+INSERT INTO inventory VALUES (1, 'Apollo', 10, 'BMX', 449);
+INSERT INTO inventory VALUES (2, 'Gazelle', 33, 'Hybrid', 649);
+INSERT INTO inventory VALUES (3, 'Boardman', 15, 'Road', 849);
+INSERT INTO inventory VALUES (4, 'Everest', 16, 'Mountain', 779);
+INSERT INTO inventory VALUES (5, 'Cityrider', 8, 'Hybrid', 479);
+INSERT INTO inventory VALUES (6, 'Leopard', 19, 'Road', 999);
+INSERT INTO inventory VALUES (7, 'Whizzard', 6, 'Electric', 1799);
+INSERT INTO inventory VALUES (8, 'Lightning', 12, 'Electric', 2449);
+INSERT INTO inventory VALUES (9, 'Cheetah', 37, 'Road', 1249);
+INSERT INTO inventory VALUES (10, 'Stockport', 22, 'Hybrid', 869);
+INSERT INTO inventory VALUES (11, 'Conquer', 12, 'Mountain', 749);
+INSERT INTO inventory VALUES (12, 'Electrostar', 17, 'Electric', 1999);
+INSERT INTO inventory VALUES (13, 'Racer', 16, 'Road', 1349);
+INSERT INTO inventory VALUES (14, 'Morbius', 2, 'Mountain', 1299);
+INSERT INTO inventory VALUES (15, 'Ashfield', 13, 'BMX', 529);
+
+SELECT * FROM inventory ORDER BY price;
+
+/* Total quantity and value of inventory */
+SELECT SUM(quantity) AS 'Total stock', SUM(quantity * price) AS 'Total stock value' FROM inventory;
+
+/* Breakdown of inventory by the type of bike including above statistics, as well as the number of brands and range of bike prices for each type */
+SELECT type AS 'Type of bike', SUM(quantity) AS 'Stock', SUM(quantity * price) AS 'Stock value', COUNT(brand) AS 'Number of brands', MIN(price) AS 'Lowest price', MAX(price) AS 'Highest price' FROM inventory
+GROUP BY type ORDER BY SUM(quantity * price) DESC;
