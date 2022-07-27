@@ -1,0 +1,131 @@
+/* Table recording inventory for a shop which sells bikes */
+CREATE TABLE inventory (id INTEGER PRIMARY KEY, brand TEXT, quantity INTEGER, bike_type TEXT, price INTEGER);
+
+INSERT INTO inventory VALUES (1, 'Apollo', 10, 'BMX', 449);
+INSERT INTO inventory VALUES (2, 'Gazelle', 33, 'Hybrid', 649);
+INSERT INTO inventory VALUES (3, 'Boardman', 15, 'Road', 849);
+INSERT INTO inventory VALUES (4, 'Everest', 16, 'Mountain', 779);
+INSERT INTO inventory VALUES (5, 'Cityrider', 8, 'Hybrid', 479);
+INSERT INTO inventory VALUES (6, 'Leopard', 19, 'Road', 999);
+INSERT INTO inventory VALUES (7, 'Whizzard', 6, 'Electric', 1799);
+INSERT INTO inventory VALUES (8, 'Lightning', 12, 'Electric', 2449);
+INSERT INTO inventory VALUES (9, 'Cheetah', 37, 'Road', 1249);
+INSERT INTO inventory VALUES (10, 'Stockport', 22, 'Hybrid', 869);
+INSERT INTO inventory VALUES (11, 'Conquer', 12, 'Mountain', 749);
+INSERT INTO inventory VALUES (12, 'Electrostar', 17, 'Electric', 1999);
+INSERT INTO inventory VALUES (13, 'Racer', 16, 'Road', 1349);
+INSERT INTO inventory VALUES (14, 'Morbius', 2, 'Mountain', 1299);
+INSERT INTO inventory VALUES (15, 'Ashfield', 13, 'BMX', 529);
+
+/* Table recording customer details*/
+CREATE TABLE customers (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, house_number INTEGER, street TEXT, town_city TEXT, county TEXT, postcode TEXT);
+
+INSERT INTO customers (name, house_number, street, town_city, county, postcode) VALUES ('Anthony Parkes', 61, 'Larkswood Drive', 'Crowthorne', 'Berkshire', 'RG45 6RH');
+INSERT INTO customers (name, house_number, street, town_city, county, postcode) VALUES ('Sam McDonnell', 30, 'Auckland Road', 'Reading', 'Berkshire', 'RG6 1NY');
+INSERT INTO customers (name, house_number, street, town_city, county, postcode) VALUES ('Julitta Kucharska', 26, 'Fairfax Road', 'Teddington', 'London', 'TW11 9DF');
+INSERT INTO customers (name, house_number, street, town_city, county, postcode) VALUES ('Eloise Gardner', 17, 'Ray Park Avenue, Flat C', 'Maidenhead', 'Berkshire', 'SL6 8DP');
+INSERT INTO customers (name, house_number, street, town_city, county, postcode) VALUES ('Kieran Chandler', 22, 'Hopcroft Avenue', 'Ambroseden', 'Oxfordshire', 'OX25 2DB');
+INSERT INTO customers (name, house_number, street, town_city, county, postcode) VALUES ('Mohamed Thygesen', 1, 'Rossington Place', 'Reading', 'Berkshire', 'RG2 8RQ');
+INSERT INTO customers (name, house_number, street, town_city, county, postcode) VALUES ('Pascal Joly', 13, 'Kempton Court', 'Sunbury-On-Thames', 'Surrey', 'TW16 5PA');
+INSERT INTO customers (name, house_number, street, town_city, county, postcode) VALUES ('Duarte Marín', 29, 'Brunswick Hill', 'Reading', 'Berkshire', 'RG1 7YU');
+INSERT INTO customers (name, house_number, street, town_city, county, postcode) VALUES ('Amy Warren', 7, 'Foxleyes Court, William Heelas Way', 'Wokingham', 'Berkshire', 'RG40 1JZ');
+INSERT INTO customers (name, house_number, street, town_city, county, postcode) VALUES ('Charlie Graham', 136, 'Woodstock Road', 'Oxford', 'Oxfordshire', 'OX2 7NG');
+INSERT INTO customers (name, house_number, street, town_city, county, postcode) VALUES ('Sebastian Rice', 20, 'Oliver Road', 'Ascot', 'Berkshire', 'SL5 9DZ');
+INSERT INTO customers (name, house_number, street, town_city, county, postcode) VALUES ('Kai Waters', 5, 'Fulmer Way', 'Ealing', 'London', 'W13 9XQ');
+INSERT INTO customers (name, house_number, street, town_city, county, postcode) VALUES ('Molly Barry', 8, 'Barn Croft Drive', 'Lower Earley', 'Berkshire', 'RG6 3WE');
+INSERT INTO customers (name, house_number, street, town_city, county, postcode) VALUES ('Peter Browne', 10, 'Taylers Court, Pelican Lane', 'Newbury', 'Berkshire', 'RG14 1AQ');
+INSERT INTO customers (name, house_number, street, town_city, county, postcode) VALUES ('Louie Dunn', 103, 'Ullswater', 'Bracknell', 'Berkshire', 'RG12 8XH');
+INSERT INTO customers (name, house_number, street, town_city, county, postcode) VALUES ('Patricia van Wilgen', 2, 'Canal Side', 'Hungerford', 'Berkshire', 'RG17 ODW');
+INSERT INTO customers (name, house_number, street, town_city, county, postcode) VALUES ('Samuel Morley', 83, 'Beech Avenue', 'Acton', 'London', 'W3 7LF');
+INSERT INTO customers (name, house_number, street, town_city, county, postcode) VALUES ('Zoe Wheeler', 279, 'Gosbrook Road', 'Caversham', 'Berkshire', 'RG4 8DX');
+INSERT INTO customers (name, house_number, street, town_city, county, postcode) VALUES ('Alicia McKenzie', 5, 'Shackleton Close', 'Bicester', 'Oxfordshire', 'OX26 4YL');
+INSERT INTO customers (name, house_number, street, town_city, county, postcode) VALUES ('Stefan Gärtner', 15, 'Oaktrees', 'Ash', 'Surrey', 'GU12 6QS');
+
+/* Table recording product sales*/
+CREATE TABLE sales_log (id INTEGER PRIMARY KEY AUTOINCREMENT, date TEXT, product_id INTEGER, sale_location TEXT, customer_id INTEGER);
+
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-01', 6, 'instore', 1);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-03', 14, 'instore', 2);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-03', 5, 'online', 3);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-07', 2, 'instore', 4);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-10', 6, 'online', 5);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-12', 13, 'instore', 6);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-13', 6, 'online', 7);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-13', 4, 'instore', 8);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-14', 2, 'instore', 9);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-15', 6, 'instore', 10);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-15', 4, 'online', 11);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-16', 10, 'online', 12);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-18', 9, 'instore', 13);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-20', 9, 'instore', 14);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-20', 8, 'instore', 14);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-23', 2, 'online', 15);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-24', 6, 'online', 16);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-25', 10, 'instore', 17);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-26', 9, 'instore', 17);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-27', 11, 'online', 18);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-29', 6, 'instore', 19);
+INSERT INTO sales_log (date, product_id, sale_location, customer_id) VALUES ('2022-07-30', 12, 'online', 20);
+
+/* How many bikes are there in the inventory and what is the total value of these assets? */
+SELECT SUM(quantity) AS total_stock, SUM(quantity * price) AS total_value
+FROM inventory;
+
+/* Breakdown of inventory by the type of bike */
+SELECT bike_type, SUM(quantity) AS stock, SUM(quantity * price) AS stock_value, COUNT(brand) AS no_of_brands, MIN(price) AS lowest_price, MAX(price) AS highest_price
+FROM inventory
+GROUP BY bike_type
+ORDER BY stock_value DESC;
+
+/* What is the total sales quantity and revenue? */
+SELECT COUNT(*) AS total_sales, SUM(price) AS revenue
+FROM sales_log
+JOIN inventory ON sales_log.product_id = inventory.id;
+
+/* What are the top 3 best-selling bikes? */
+SELECT brand, bike_type, COUNT(product_id) AS sales, price
+FROM inventory
+JOIN sales_log ON sales_log.product_id = inventory.id
+GROUP BY brand
+ORDER BY sales DESC LIMIT 3;
+
+/* For which bikes are there no sales recorded? */
+SELECT brand, bike_type, COUNT(product_id) AS sales, price
+FROM inventory
+LEFT OUTER JOIN sales_log ON sales_log.product_id = inventory.id
+GROUP BY brand
+HAVING sales = 0;
+
+/* Breakdown of sales by the type of bike */
+SELECT bike_type, COUNT(product_id) AS sales, COUNT(product_id) * price AS sales_value
+FROM inventory
+LEFT OUTER JOIN sales_log ON sales_log.product_id = inventory.id
+GROUP BY bike_type
+ORDER BY sales_value DESC;
+
+/* Where do the customers reside? */
+SELECT county, COUNT(*) AS no_of_customers
+FROM customers
+GROUP BY county
+ORDER BY no_of_customers DESC;
+
+/* Do more customers purchase bikes instore or online, and how much do they spend?*/
+SELECT sale_location, COUNT(*) AS sales, ROUND(AVG(price), 2) AS average_spend
+FROM sales_log
+JOIN inventory ON inventory.id = sales_log.product_id
+GROUP BY sale_location;
+
+/* What bikes were purchased by customers that reside in Reading and the surrounding area? */
+SELECT name, town_city, postcode, brand, bike_type FROM sales_log
+JOIN inventory ON inventory.id = sales_log.product_id
+JOIN customers ON customers.id = sales_log.customer_id
+WHERE town_city = 'Reading' OR postcode LIKE 'RG1 %' OR postcode LIKE 'RG2 %' OR postcode LIKE 'RG4 %' OR postcode LIKE 'RG5 %' OR postcode LIKE 'RG6 %' OR postcode LIKE 'RG30 %' OR postcode LIKE 'RG31 %'
+ORDER BY name;
+
+/* Which customers spent more than 1500? */
+SELECT name, SUM(price) AS total_spend, COUNT(customer_id) AS no_of_purchases FROM customers
+JOIN inventory ON inventory.id = sales_log.product_id
+JOIN sales_log ON sales_log.customer_id = customers.id
+GROUP BY customers.id
+HAVING total_spend > 1500
+ORDER BY total_spend DESC
