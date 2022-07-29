@@ -132,9 +132,13 @@ LIMIT 5;
 
 /* Sales statistics by country, with EU countries grouped together */
 SELECT CASE
-WHEN country IN ('Austria', 'Belgium', 'Bulgaria', 'Croatia', 'Cyprus', 'Czech Republic', 'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Ireland', 'Italy', 'Latvia', 'Lithuania', 'Luxembourg', 'Malta', 'Netherlands', 'Poland', 'Portugal', 'Romania', 'Slovakia', 'Slovenia', 'Spain', 'Sweden') THEN 'European Union'
+WHEN country IN ('Austria', 'Belgium', 'Bulgaria', 'Croatia', 'Cyprus', 'Czech Republic', 'Denmark', 'Estonia', 'Finland', 'France', 'Germany', 'Greece', 'Hungary', 'Ireland', 'Italy', 'Latvia', 'Lithuania', 'Luxembourg', 'Malta', 'Netherlands', 'Poland', 'Portugal', 'Romania', 'Slovakia', 'Slovenia', 'Spain', 'Sweden') 
+THEN 'European Union'
 ELSE country    
-END AS country_region, COUNT(*) AS sales, ROUND(AVG(price)) AS average_order, SUM(price) AS revenue
+END AS country_region,
+COUNT(*) AS sales, 
+ROUND(AVG(price)) AS average_order, 
+SUM(price) AS revenue
 FROM sales
 GROUP BY country_region
 ORDER BY revenue DESC;
