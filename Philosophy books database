@@ -1,40 +1,40 @@
 /* List of philosophy books */
 CREATE TABLE books (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT, author TEXT, year_published INTEGER);
 
-INSERT INTO books (title, author, year_published) VALUES ("Ethics", "Baruch Spinoza", 1677);
-INSERT INTO books (title, author, year_published) VALUES ("Theological-Political Treatise", "Baruch Spinoza", 1670);
-INSERT INTO books (title, author, year_published) VALUES ("On The Improvement Of The Understanding", "Baruch Spinoza", 1677);
-INSERT INTO books (title, author, year_published) VALUES ("Political Treatise", "Baruch Spinoza", 1677);
-INSERT INTO books (title, author, year_published) VALUES ("Critique of Pure Reason", "Immanuel Kant", 1781);
-INSERT INTO books (title, author, year_published) VALUES ("Prolegomena to Any Future Metaphysics", "Immanuel Kant", 1783);
-INSERT INTO books (title, author, year_published) VALUES ("Groundwork of the Metaphysics of Morals", "Immanuel Kant", 1785);
-INSERT INTO books (title, author, year_published) VALUES ("Critique of Judgement", "Immanuel Kant", 1790);
-INSERT INTO books (title, author, year_published) VALUES ("The World as Will and Representation, Vol 1", "Arthur Schopenhauer", 1818);
-INSERT INTO books (title, author, year_published) VALUES ("The Art of Being Right", "Arthur Schopenhauer", 1831);
-INSERT INTO books (title, author, year_published) VALUES ("The Wisdom of Life", "Arthur Schopenhauer", 1851);
-INSERT INTO books (title, author, year_published) VALUES ("The World as Will and Representation, Vol 2", "Arthur Schopenhauer", 1844);
-INSERT INTO books (title, author, year_published) VALUES ("Essays and Aphorisms", "Arthur Schopenhauer", 1851);
-INSERT INTO books (title, author, year_published) VALUES ("Fear and Trembling", "Soren Kierkegaard", 1843);
-INSERT INTO books (title, author, year_published) VALUES ("Works of Love", "Soren Kierkegaard", 1847);
-INSERT INTO books (title, author, year_published) VALUES ("Thus Spoke Zarathustra", "Friedrich Nietzsche", 1892);
-INSERT INTO books (title, author, year_published) VALUES ("On the Genealogy of Morality", "Friedrich Nietzsche", 1887);
-INSERT INTO books (title, author, year_published) VALUES ("The Antichrist", "Friedrich Nietzsche", 1888);
-INSERT INTO books (title, author, year_published) VALUES ("The Birth of Tragedy", "Friedrich Nietzsche", 1872);
-INSERT INTO books (title, author, year_published) VALUES ("Ecce Homo", "Friedrich Nietzsche", 1883);
-INSERT INTO books (title, author, year_published) VALUES ("Being and Nothingness", "Jean-Paul Sartre", 1943);
-INSERT INTO books (title, author, year_published) VALUES ("Nausea", "Jean-Paul Sartre", 1938);
-INSERT INTO books (title, author, year_published) VALUES ("The Age of Reason", "Jean-Paul Sartre", 1945);
-INSERT INTO books (title, author, year_published) VALUES ("Existentialism is a Humanism", "Jean-Paul Sartre", 1946);
+INSERT INTO books (title, author, year_published) VALUES ('Ethics', 'Baruch Spinoza', 1677);
+INSERT INTO books (title, author, year_published) VALUES ('Theological-Political Treatise', 'Baruch Spinoza', 1670);
+INSERT INTO books (title, author, year_published) VALUES ('On The Improvement Of The Understanding', 'Baruch Spinoza', 1677);
+INSERT INTO books (title, author, year_published) VALUES ('Political Treatise', 'Baruch Spinoza', 1677);
+INSERT INTO books (title, author, year_published) VALUES ('Critique of Pure Reason', 'Immanuel Kant', 1781);
+INSERT INTO books (title, author, year_published) VALUES ('Prolegomena to Any Future Metaphysics', 'Immanuel Kant', 1783);
+INSERT INTO books (title, author, year_published) VALUES ('Groundwork of the Metaphysics of Morals', 'Immanuel Kant', 1785);
+INSERT INTO books (title, author, year_published) VALUES ('Critique of Judgement', 'Immanuel Kant', 1790);
+INSERT INTO books (title, author, year_published) VALUES ('The World as Will and Representation, Vol 1', 'Arthur Schopenhauer', 1818);
+INSERT INTO books (title, author, year_published) VALUES ('The Art of Being Right', 'Arthur Schopenhauer', 1831);
+INSERT INTO books (title, author, year_published) VALUES ('The Wisdom of Life', 'Arthur Schopenhauer', 1851);
+INSERT INTO books (title, author, year_published) VALUES ('The World as Will and Representation, Vol 2', 'Arthur Schopenhauer', 1844);
+INSERT INTO books (title, author, year_published) VALUES ('Essays and Aphorisms', 'Arthur Schopenhauer', 1851);
+INSERT INTO books (title, author, year_published) VALUES ('Fear and Trembling', 'Soren Kierkegaard', 1843);
+INSERT INTO books (title, author, year_published) VALUES ('Works of Love', 'Soren Kierkegaard', 1847);
+INSERT INTO books (title, author, year_published) VALUES ('Thus Spoke Zarathustra', 'Friedrich Nietzsche', 1892);
+INSERT INTO books (title, author, year_published) VALUES ('On the Genealogy of Morality', 'Friedrich Nietzsche', 1887);
+INSERT INTO books (title, author, year_published) VALUES ('The Antichrist', 'Friedrich Nietzsche', 1888);
+INSERT INTO books (title, author, year_published) VALUES ('The Birth of Tragedy', 'Friedrich Nietzsche', 1872);
+INSERT INTO books (title, author, year_published) VALUES ('Ecce Homo', 'Friedrich Nietzsche', 1883);
+INSERT INTO books (title, author, year_published) VALUES ('Being and Nothingness', 'Jean-Paul Sartre', 1943);
+INSERT INTO books (title, author, year_published) VALUES ('Nausea', 'Jean-Paul Sartre', 1938);
+INSERT INTO books (title, author, year_published) VALUES ('The Age of Reason', 'Jean-Paul Sartre', 1945);
+INSERT INTO books (title, author, year_published) VALUES ('Existentialism is a Humanism', 'Jean-Paul Sartre', 1946);
 
 /* List of philosophers */
 CREATE TABLE philosophers (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, nationality TEXT, birth_year INTEGER, death_year INTEGER);
 
-INSERT INTO philosophers (name, nationality, birth_year, death_year) VALUES ("Arthur Schopenhauer", "German", 1788, 1860);
-INSERT INTO philosophers (name, nationality, birth_year, death_year) VALUES ("Friedrich Nietzsche", "German", 1844, 1900);
-INSERT INTO philosophers (name, nationality, birth_year, death_year) VALUES ("Immanuel Kant", "German", 1724, 1804);
-INSERT INTO philosophers (name, nationality, birth_year, death_year) VALUES ("Baruch Spinoza", "Dutch", 1632, 1677);
-INSERT INTO philosophers (name, nationality, birth_year, death_year) VALUES ("Soren Kierkegaard", "Danish", 1813, 1855);
-INSERT INTO philosophers (name, nationality, birth_year, death_year) VALUES ("Jean-Paul Sartre", "French", 1905, 1980);
+INSERT INTO philosophers (name, nationality, birth_year, death_year) VALUES ('Arthur Schopenhauer', 'German', 1788, 1860);
+INSERT INTO philosophers (name, nationality, birth_year, death_year) VALUES ('Friedrich Nietzsche', 'German', 1844, 1900);
+INSERT INTO philosophers (name, nationality, birth_year, death_year) VALUES ('Immanuel Kant', 'German', 1724, 1804);
+INSERT INTO philosophers (name, nationality, birth_year, death_year) VALUES ('Baruch Spinoza', 'Dutch', 1632, 1677);
+INSERT INTO philosophers (name, nationality, birth_year, death_year) VALUES ('Soren Kierkegaard', 'Danish', 1813, 1855);
+INSERT INTO philosophers (name, nationality, birth_year, death_year) VALUES ('Jean-Paul Sartre', 'French', 1905, 1980);
 
 /* Early 19th century philosophy books */
 SELECT title, author, nationality, year_published as year
@@ -48,7 +48,7 @@ ORDER BY year_published;
 SELECT title, author, year_published
 FROM books
 JOIN philosophers ON philosophers.name = books.author
-WHERE title LIKE "%metaphysics%";
+WHERE title LIKE '%metaphysics%';
     
 /* Books published before the age of 35 */
 SELECT title, author, year_published - birth_year as age_when_published
